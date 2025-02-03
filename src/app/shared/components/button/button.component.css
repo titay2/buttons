@@ -1,0 +1,19 @@
+button {
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+button:focus-visible {
+  outline: 2px solid #BADAFF !important;
+  background-color: inherit !important;
+  outline-offset: 2px;
+  outline: none;
+}
+
+.mdc-button[disabled], .mat-mdc-button-disabled {
+  background-color: #F3F3F3 !important; 
+  color: #999999 !important;
+  cursor: not-allowed !important; 
+}

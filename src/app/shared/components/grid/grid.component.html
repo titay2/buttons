@@ -1,0 +1,16 @@
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight">
+    <mat-grid-tile *ngFor="let tile of tiles">
+      <ng-container *ngIf="tile.text; else buttonTemplate">
+        {{ tile.text }}
+      </ng-container>
+      <ng-template #buttonTemplate>
+        <app-button
+          *ngIf="tile.button"
+          [label]="tile.button.label"
+          [color]="tile.button.color"
+          [icon]="tile.button.icon"
+          [disabled]="tile.button.disabled"
+        ></app-button>
+      </ng-template>
+    </mat-grid-tile>
+  </mat-grid-list>
